@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import { GetRepo } from "./compomentes/GetRepo";
+import { GetCategory } from "./compomentes/GetCategory";
+import { GetLeter } from "./compomentes/GetLeter";
+import { GetSerie } from "./compomentes/GetSerie";
+import { GetVariantSerie } from "./compomentes/GetVariantSerie";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Link to="/">
+          <h1>
+            The <strong>Anime</strong> DataBase
+          </h1>
+        </Link>
       </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<GetRepo />} />
+          <Route path="/:category" element={<GetCategory />} />
+          <Route path="/:category/:leter" element={<GetLeter />} />
+          <Route path="/:category/:leter/:serie" element={<GetSerie />} />
+          <Route path="/:category/:leter/:serie/:variant" element={<GetVariantSerie />} />
+        </Routes>
+      </main>
     </div>
   );
-}
+};
 
 export default App;

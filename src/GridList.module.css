@@ -1,0 +1,90 @@
+.cardPrice {
+  padding: 0.5rem 1rem;
+  border-radius: 12rem;
+  background-color: #303032;
+}
+
+
+.cardTime {
+}
+
+.cardInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.cardContent {
+  padding: 0.5rem;
+}
+
+.cardImgWrapper {
+  width: 100%;
+  padding-top: .5%;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+}
+.titleLink{
+  text-decoration: none;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+
+}
+.cardImg {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  grid-column-end: span 4;
+  background-color: #39393b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  grid-column-end: span 6;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    grid-column-end: span 6;
+  }
+}
+@media screen and (max-width: 432px) {
+  .card {
+    grid-column-end: span 12;
+  }
+}
+
+.cards {
+  color: lightgray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(18, minmax(auto, 1fr));
+  grid-gap: 2rem;
+}
+
+.container {
+  padding: 4rem 4rem;
+background-color: aqua;
+}
